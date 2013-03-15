@@ -4,7 +4,7 @@
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/flagship"/>
-	<classpathentry kind="lib" path="D:/WeatherChannelAutomation/Robotium/robotium-solo-3.6.jar"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/flagship"/>
+	<classpathentry exported="true" kind="lib" path="D:/WeatherChannelAutomation/Robotium/robotium-solo-3.6.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

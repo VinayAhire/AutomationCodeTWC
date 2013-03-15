@@ -2,6 +2,7 @@ package com.weather.Weather.test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import android.util.Log;
 import android.view.Surface;
@@ -168,7 +169,33 @@ public class VideoModule extends SetUpApplication {
 		return videoObj.getVideoView(solo).getDuration();
 	}
 
-
+	/**
+	 * checkVideoLength method first get the length of the video in milliseconds,
+	 * then it converts it to the format hh:mm:ss.
+	 * It then verifies if the duration "hh:mm:ss" or "mm:ss" is displayed or not.
+	 */
+	public void checkVideoLength(){
+		utilobj.launchUiTab(WeatherConstants.VIDEOS_FRAGMENT, solo);
+		playVideo();
+		long videoLength = getVideoLength();
+		System.out.println("VideoLength:"+videoLength);
+		pauseVideo();
+		
+		String hms = String.format("%02d:%02d:%02d", TimeUnit.MILLISECONDS.toHours(videoLength),
+	            TimeUnit.MILLISECONDS.toMinutes(videoLength) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(videoLength)),
+	            TimeUnit.MILLISECONDS.toSeconds(videoLength) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(videoLength)));
+	    if(hms.startsWith("00")){
+	    	hms=hms.substring(3, 8);
+	    }
+	    
+	    System.out.println("HH:MM:SS"+hms);
+	    
+	    solo.clickOnView(videoObj.getVideoView(solo));
+	    assertTrue("Video Length not shown.", solo.searchText(hms));
+	    solo.sleep(3000);
+	}
+	
+	
 	
 
 }
