@@ -2,13 +2,14 @@ package com.weather.Weather.Objects;
 
 
 import android.widget.Button;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.jayway.android.robotium.solo.Solo;
 import com.weather.Weather.R;
 import com.weather.Weather.view.VideoViewWithMidpoint;
-public class VideoModuleObjets {
+public class VideoModuleObjects {
 
 
 
@@ -68,5 +69,24 @@ public class VideoModuleObjets {
 		return learnMore;
 	}
 
-
+	public GridView getVideoListView(Solo solo){
+		GridView videoGridView = (GridView) solo.getView(R.id.video_listView);
+		return videoGridView;
+	}
+	
+	public ImageView getImageViewVideoThumbnailIcon(Solo solo){
+		ImageView videoLineImage = (ImageView) solo.getView(R.id.video_line_icon);
+		return videoLineImage;
+	}
+	
+	public TextView getTextViewVideoLineText(Solo solo) {
+		TextView videoLine = (TextView) solo.getView(R.id.video_line_title);
+		return videoLine;
+	}
+	
+	public TextView getTextViewVideoMainText(Solo solo) {
+		TextView videoMainTitle = (TextView) solo.getView(R.id.video_main_title);
+		return videoMainTitle;
+	}
+	
 }

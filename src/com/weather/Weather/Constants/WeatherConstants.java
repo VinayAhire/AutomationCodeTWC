@@ -68,5 +68,7 @@ public class WeatherConstants {
 	public static final String VIDEO_ON_TV="ON TV";
 	
 	public static final String LOCATION_MISPLACE_POPUP="Oh No! We have ";
+	
+	public static final String US_LOCATION="San Francisco, CA";
 
 }
