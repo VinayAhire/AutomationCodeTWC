@@ -49,5 +49,9 @@ public class MapModule extends SetUpApplication{
 		
 		
 	*/}
+	
+	public void abc(){
+		
+	}
 
 }
