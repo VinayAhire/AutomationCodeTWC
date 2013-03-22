@@ -52,6 +52,7 @@ public class MapModule extends SetUpApplication{
 	
 	public void abc(){
 		System.out.println("Hello abc");
+		System.out.println("Hiiii Vinay");
 	}
 
 }
