@@ -49,5 +49,8 @@ public class MapModule extends SetUpApplication{
 		
 		
 	*/}
+	public void testNewMethod(){
+		System.out.println("By Rahul....");
+	}
 
 }
